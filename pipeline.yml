@@ -4,9 +4,9 @@ resources:
     type: semver
     source:
       driver: git
-      uri: git@github.com:making/ver-demo.git
+      uri: git@github.com:making/concourse-version.git
       branch: master
-      file: version
+      file: ver-demo/version
       private_key: {{private-key-github}}
 
 jobs:
