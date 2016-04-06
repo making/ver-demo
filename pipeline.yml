@@ -1,0 +1,15 @@
+- name: version
+  type: semver
+  source:
+    driver: git
+    uri: git@github.com:making/ver-demo.git
+    branch: master
+    file: version
+    private_key: {{private-key-github}}
+    
+- name: tag-master
+  public: true
+  serial: true
+  plan:  
+  - put: version
+    params: {bump: patch}
